@@ -1,0 +1,10 @@
+{
+  "mongodb": {
+    "host": "localhost",
+    "replicaSet": "production-DbName",
+    "dbname": "DbName",
+    "port": 12345,
+    "username": "$keys.mongo.qa.username",
+    "password": "$keys.mongo.qa.password"
+  }
+}

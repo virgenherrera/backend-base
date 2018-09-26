@@ -1,0 +1,10 @@
+{
+  "mongodb": {
+    "host": "localhost",
+    "replicaSet": "qa-DbName",
+    "dbname": "DbName",
+    "port": 12344,
+    "username": "$keys.mongo.qa.username",
+    "password": "$keys.mongo.qa.password"
+  }
+}
