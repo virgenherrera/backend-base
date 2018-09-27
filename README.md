@@ -11,11 +11,48 @@ none || `/service-suffix`
 /v1
 
 ---
+<a name="main_menu"></a>
+## Menu
+### [Document Conventions](#document_conventions)
+### [NAME Service Hosts](#service_hosts)
+### API
+#### POST
+* ![Done](statics/done_small.png) [POST /entity1](#post_entity1)
+* ![Done](statics/in_progress_small.png) [POST /entity2](#post_entity2)
+* ![Done](statics/not_started_small.png) [POST /entity3](#post_entity3)
+
+#### GET
+* ![Done](statics/done_small.png) [GET /entity1](#get_entity1)
+* ![Done](statics/done_small.png) [GET /entity1/:id](#get_entity_element)
+
+#### PUT
+* ![Done](statics/done_small.png) [PUT /entity1/:id](#put_entity1)
+
+#### DELETE
+* ![Done](statics/done_small.png) [DELETE entity1/:id](#delete_entity1)
+
+### Frontend
+* ![Done](statics/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page</a>
+
+### [Setting up a Development Environment](#dev_env)
+
+---
+<a name="document_conventions"></a>
+[Back to Menu](#main_menu)
+## Document Conventions
+
+## Colors
+![Not Started](./statics/not_started.png) Not started
+
+![In Progress](./statics/in_progress.png) In progress (it could be working in the qa environment)
+
+![Done](./statics/done.png) Deployed
+
 ## Response Codes
 
 + **200** -- The request has succeeded.
 + **201** -- The request has been fulfilled and resulted in a new resource being created.
-+ **204** -- The server has fulfilled the request but does not need to return an entity-body, and might want to return updated meta-information.
++ **204** -- The server has fulfilled the request but does not need to return an entity in the body, and may want to return updated metadata in the header.
 + **304** -- The server hasn't modified the item.
 + **400** -- The request could not be understood by the server due to malformed syntax.
 + **401** -- The request requires user authentication.
@@ -23,60 +60,49 @@ none || `/service-suffix`
 + **404** -- The server has not found anything matching the Request-URI.
 + **500** -- The server encountered an unexpected condition which prevented it from fulfilling the request.
 
----
-### NAME Service Hosts
+## Request examples
+- curl
+```
+curl -X GET 'https://name.domain.ext/service-NAME/api/v1/'
+```
+- php
+```
+<?php
+url_init('https://name.domain.ext/service-NAME/api/v1/entity1');
+?>
+```
+- c#
+```
+string url = @"https://name.domain.ext/service-NAME/api/v1/entity1";
 
-|Environment| Host |
+HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+```
+
+- Node.js
+```
+const { get } = require('http');
+const url = 'https://name.domain.ext/service-NAME/api/v1/entity1';
+
+get(url, (res) => { res; })
+```
+
+---
+<a name="service_hosts"></a>
+[Back to Menu](#main_menu)
+## NAME Service Hosts
+
+| Environment| Host |
 |-|-|
 qa | https://qa-name.domain.ext
 staging | https://staging-name.domain.ext
 production | https://name.domain.ext
 
 ---
-***Example curl request***
-```
-curl -X GET 'https://name.domain.ext/service-NAME/api/v1/'
-```
-
----
-## Diagrams
-
-## Status of Routes
-![Not Started](./statics/not_started.png) Not started
-
-![In Progress](./statics/in_progress.png) In progress (stub with readme requests and responses)
-
-![Done](./statics/done.png) Deployed
-
-<a name="routes_menu"></a>
-# Menu
-## API
-### POST
-* ![Done](statics/done_small.png) [POST /entity1](#post_entity1)
-* ![Done](statics/in_progress_small.png) [POST /entity2](#post_entity2)
-* ![Done](statics/not_started_small.png) [POST /entity3](#post_entity3)
-
-### GET
-* ![Done](statics/done_small.png) [GET /entity1](#get_entity1)
-* ![Done](statics/done_small.png) [GET /entity1/:id](#get_entity_element)
-
-### PUT
-* ![Done](statics/done_small.png) [PUT /entity1/:id](#put_entity1)
-
-### DELETE
-* ![Done](statics/done_small.png) [DELETE entity1/:id](#delete_entity1)
-
-## Frontend
-* ![Done](statics/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page</a>
-
-## [Setting up a Development Environment](#dev_env)
----
-
 <a name="post_entity1"></a>
-[Back to Menu](#routes_menu)
-### POST /entity1/ 
+[Back to Menu](#main_menu)
+### POST /entity1/
 ![Done](statics/done.png)
-- 
+-
 Endpoint description here!!!
 
 #### Parameters
@@ -108,7 +134,7 @@ POST https://name.domain.ext/api/v1/entity1/
 ---
 
 <a name="post_entity2"></a>
-[Back to Menu](#routes_menu)
+[Back to Menu](#main_menu)
 ### POST /entity2/
 ![Done](statics/in_progress.png)
 -
@@ -143,7 +169,7 @@ POST https://name.domain.ext/api/v1/entity2/
 ---
 
 <a name="post_entity3"></a>
-[Back to Menu](#routes_menu)
+[Back to Menu](#main_menu)
 ### POST /entity3/
 ![Done](statics/not_started.png)
 -
@@ -178,7 +204,7 @@ POST https://name.domain.ext/api/v1/entity3/
 ---
 
 <a name="get_entity1"></a>
-[Back to Menu](#routes_menu)
+[Back to Menu](#main_menu)
 ### GET /entity1/
 ![Done](statics/done.png)
 -
@@ -219,7 +245,7 @@ GET https://name.domain.ext/service-NAME/api/v1/entity1/
 ---
 
 <a name="get_entity_element"></a>
-[Back to Menu](#routes_menu)
+[Back to Menu](#main_menu)
 ### GET /entity1/:id/
 ![Done](statics/done.png)
 -
@@ -251,7 +277,7 @@ GET  https://name.domain.ext/service-NAME/api/v1/entity1/ff007356baf6c6b63bc17b7
 ---
 
 <a name="put_entity1"></a>
-[Back to Menu](#routes_menu)
+[Back to Menu](#main_menu)
 ### PUT /entity1/:id
 ![Done](statics/done.png)
 -
@@ -287,7 +313,7 @@ PUT https://name.domain.ext/service-NAME/api/v1/entity1/ff007356baf6c6b63bc17b7b
 ---
 
 <a name="delete_entity1"></a>
-[Back to Menu](#routes_menu)
+[Back to Menu](#main_menu)
 ### DELETE /entity1/:id/
 ![Done](statics/done.png)
 -
@@ -312,15 +338,16 @@ HTTP status: 204
 
 
 <a name="dev_env"></a>
-[Back to Menu](#routes_menu)
-# Setting up a Development Environment
+[Back to Menu](#main_menu)
+## Setting up a Development Environment
 
 ## Pre-requisites
 
-* Provide `./node/config/keys.json` file
-* Node v6.9.1
-* Run `npm install` in the node directory
-* MongoDB running (Locally or QA environments)
+* Provide `./node/config/keys.json` file.
+* Node v6.9.1 or higher.
+* Run `npm install` in the node directory.
+* MongoDB running (Locally or QA environments).
+* Redis running (Locally or QA environments).
 
 ## Add keys.json file to the config directories
 * Add the `keys.json` file to the `./node/config` directory.
@@ -331,7 +358,10 @@ HTTP status: 204
 * Start the server with `npm start`.
 * Hit desired endpoint and provide valid access token if any.
 
-## running tests
+## Running tests
 * Be sure that you have provided `./node/config/keys.json` file.
 * Navigate to the `node/` directory.
 * Launch test suite with `npm test`.
+---
+
+[Back to Menu](#main_menu)

@@ -7,6 +7,7 @@
   "tslint.autoFixOnSave": true,
   "tslint.enable": true,
   "tslint.run": "onType",
+  "tslint.rulesDirectory": "/node",
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "boundary",
   "workbench.colorTheme": "Visual Studio Dark"

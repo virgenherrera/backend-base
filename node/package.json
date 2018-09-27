@@ -28,8 +28,8 @@
     "url": "https://github.com/username/repository/issues"
   },
   "scripts": {
-    "test": "nyc mocha",
-    "build": "npm run cleanup && npm run tslint && npm run test && npm run tsc",
+    "test": "npm run tslint && nyc mocha",
+    "build": "npm run cleanup && npm run test && npm run tsc",
     "cleanup": "npm run clean:dist && npm run clean:nyc_output && npm run clean:coverage",
     "clean:dist": "rimraf dist",
     "clean:nyc_output": "rimraf .nyc_output",
@@ -44,12 +44,14 @@
     "@types/mocha": "^5.2.5",
     "@types/node": "^10.5.8",
     "@types/rimraf": "^2.0.2",
+    "@types/supertest": "^2.0.6",
     "@types/winston": "^2.4.4",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
     "nyc": "^13.0.1",
     "rimraf": "^2.6.2",
     "source-map-support": "^0.5.9",
+    "supertest": "^3.3.0",
     "ts-node": "^7.0.0",
     "tslint": "^5.11.0",
     "typescript": "^3.0.3"
@@ -66,6 +68,7 @@
       "dist/**"
     ],
     "reporter": [
+      "cobertura",
       "html",
       "text-summary"
     ],
