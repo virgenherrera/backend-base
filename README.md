@@ -336,22 +336,18 @@ DELETE https://name.domain.ext/service-NAME/api/v1/entity1/ff007356baf6c6b63bc17
 ```
 HTTP status: 204
 ```
+
 ---
-
-
 <a name="dev_env"></a>
 [Back to Menu](#main_menu)
 ## Setting up a Development Environment
 
 ## Pre-requisites
 
-* Provide `./node/config/keys.json` file.
 * Node v6.9.1 or higher.
 * Run `npm install` in the node directory.
 * MongoDB running (Locally or QA environments).
 * Redis running (Locally or QA environments).
-
-## Add keys.json file to the config directories
 * Add the `keys.json` file to the `./node/config` directory.
 
 ## Starting server & hitting endpoints
