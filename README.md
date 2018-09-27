@@ -32,7 +32,9 @@ none || `/service-suffix`
 * ![Done](statics/done_small.png) [DELETE entity1/:id](#delete_entity1)
 
 ### Frontend
-* ![Done](statics/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page</a>
+* ![Done](statics/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page 1</a>
+* ![Done](statics/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page 2</a>
+* ![Done](statics/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page 3</a>
 
 ### [Setting up a Development Environment](#dev_env)
 
