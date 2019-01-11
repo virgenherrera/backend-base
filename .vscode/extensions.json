@@ -6,6 +6,7 @@
     "eg2.tslint",
     "mikestead.dotenv",
     "msjsdiag.debugger-for-chrome",
+    "rbbit.typescript-hero",
     "streetsidesoftware.code-spell-checker"
   ]
 }

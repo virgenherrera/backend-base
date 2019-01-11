@@ -1,12 +1,6 @@
 # NAME Service
 Service description
 
-## Service Prefix:
-none || `/service-prefix`
-
-## Service Suffix:
-none || `/service-suffix`
-
 ## Current Version:
 /v1
 
@@ -17,24 +11,24 @@ none || `/service-suffix`
 ### [NAME Service Hosts](#service_hosts)
 ### API
 #### POST
-* ![Done](statics/done_small.png) [POST /entity1](#post_entity1)
-* ![Done](statics/in_progress_small.png) [POST /entity2](#post_entity2)
-* ![Done](statics/not_started_small.png) [POST /entity3](#post_entity3)
+* ![Done](readmeFiles/done_small.png) [POST /entity1](#post_entity1)
+* ![Done](readmeFiles/in_progress_small.png) [POST /entity2](#post_entity2)
+* ![Done](readmeFiles/not_started_small.png) [POST /entity3](#post_entity3)
 
 #### GET
-* ![Done](statics/done_small.png) [GET /entity1](#get_entity1)
-* ![Done](statics/done_small.png) [GET /entity1/:id](#get_entity_element)
+* ![Done](readmeFiles/done_small.png) [GET /entity1](#get_entity1)
+* ![Done](readmeFiles/done_small.png) [GET /entity1/:id](#get_entity_element)
 
 #### PUT
-* ![Done](statics/done_small.png) [PUT /entity1/:id](#put_entity1)
+* ![Done](readmeFiles/done_small.png) [PUT /entity1/:id](#put_entity1)
 
 #### DELETE
-* ![Done](statics/done_small.png) [DELETE entity1/:id](#delete_entity1)
+* ![Done](readmeFiles/done_small.png) [DELETE entity1/:id](#delete_entity1)
 
 ### Frontend
-* ![Done](statics/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page 1</a>
-* ![Done](statics/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page 2</a>
-* ![Done](statics/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page 3</a>
+* ![Done](readmeFiles/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page 1</a>
+* ![Done](readmeFiles/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page 2</a>
+* ![Done](readmeFiles/done_small.png) <a href="https://name.domain.ext/seo-friendly-url" target="_blank">frontend Page 3</a>
 
 ### [Setting up a Development Environment](#dev_env)
 
@@ -44,11 +38,11 @@ none || `/service-suffix`
 ## Document Conventions
 
 ## Colors
-![Not Started](./statics/not_started.png) Not started
+![Not Started](./readmeFiles/not_started.png) Not started
 
-![In Progress](./statics/in_progress.png) In progress (it could be working in the qa environment)
+![In Progress](./readmeFiles/in_progress.png) In progress (it could be working in the qa environment)
 
-![Done](./statics/done.png) Deployed
+![Done](./readmeFiles/done.png) Deployed
 
 ## Response Codes
 
@@ -103,7 +97,7 @@ production | https://name.domain.ext
 <a name="post_entity1"></a>
 [Back to Menu](#main_menu)
 ### POST /entity1/
-![Done](statics/done.png)
+![Done](readmeFiles/done.png)
 -
 Endpoint description here!!!
 
@@ -138,7 +132,7 @@ POST https://name.domain.ext/api/v1/entity1/
 <a name="post_entity2"></a>
 [Back to Menu](#main_menu)
 ### POST /entity2/
-![Done](statics/in_progress.png)
+![Done](readmeFiles/in_progress.png)
 -
 Endpoint description here!!!
 
@@ -173,7 +167,7 @@ POST https://name.domain.ext/api/v1/entity2/
 <a name="post_entity3"></a>
 [Back to Menu](#main_menu)
 ### POST /entity3/
-![Done](statics/not_started.png)
+![Done](readmeFiles/not_started.png)
 -
 Endpoint description here!!!
 
@@ -208,7 +202,7 @@ POST https://name.domain.ext/api/v1/entity3/
 <a name="get_entity1"></a>
 [Back to Menu](#main_menu)
 ### GET /entity1/
-![Done](statics/done.png)
+![Done](readmeFiles/done.png)
 -
 Endpoint description here!!!
 
@@ -249,7 +243,7 @@ GET https://name.domain.ext/service-NAME/api/v1/entity1/
 <a name="get_entity_element"></a>
 [Back to Menu](#main_menu)
 ### GET /entity1/:id/
-![Done](statics/done.png)
+![Done](readmeFiles/done.png)
 -
 Endpoint description here!!!
 
@@ -281,7 +275,7 @@ GET  https://name.domain.ext/service-NAME/api/v1/entity1/ff007356baf6c6b63bc17b7
 <a name="put_entity1"></a>
 [Back to Menu](#main_menu)
 ### PUT /entity1/:id
-![Done](statics/done.png)
+![Done](readmeFiles/done.png)
 -
 Endpoint description here!!!
 
@@ -317,7 +311,7 @@ PUT https://name.domain.ext/service-NAME/api/v1/entity1/ff007356baf6c6b63bc17b7b
 <a name="delete_entity1"></a>
 [Back to Menu](#main_menu)
 ### DELETE /entity1/:id/
-![Done](statics/done.png)
+![Done](readmeFiles/done.png)
 -
 Endpoint description here!!!
 
@@ -348,17 +342,15 @@ HTTP status: 204
 * Run `npm install` in the node directory.
 * MongoDB running (Locally or QA environments).
 * Redis running (Locally or QA environments).
-* Add the `keys.json` file to the `./node/config` directory.
+* Add the `keys.json` file to the `./config` directory.
 
 ## Starting server & hitting endpoints
-* Be sure that you have provided `./node/config/keys.json` file.
-* Navigate to the `node/` directory.
+* Be sure that you have provided `./config/keys.json` file.
 * Start the server with `npm start`.
 * Hit desired endpoint and provide valid access token if any.
 
 ## Running tests
-* Be sure that you have provided `./node/config/keys.json` file.
-* Navigate to the `node/` directory.
+* Be sure that you have provided `./config/keys.json` file.
 * Launch test suite with `npm test`.
 ---
 

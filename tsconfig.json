@@ -4,9 +4,9 @@
       "es6"
     ],
     "module": "commonjs",
-    "target": "es5",
+    "target": "es6",
     "moduleResolution": "node",
-    "declaration": true,
+    "declaration": false,
     "rootDir": "./src",
     "outDir": "dist",
     "types": [
@@ -20,7 +20,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
+    "emitDecoratorMetadata": true
   },
   "typeRoots": [
     "./node_modules/@types"
