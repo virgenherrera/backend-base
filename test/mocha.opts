@@ -10,4 +10,4 @@
 --require ./test/setup.ts
 --exit
 
-test/**/*.test.ts
+test/**/*.spec.ts

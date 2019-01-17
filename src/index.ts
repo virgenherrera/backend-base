@@ -17,7 +17,7 @@ const config: IAppSettings = {
 	preRouteHooks: [],
 	publicFolder: '../public',
 	faviconPath: '../public/favicon.ico',
-	// routesFolder: './Handler/Restful',
+	routesFolder: './handler/rest',
 };
 
 (postLoader)
