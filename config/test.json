@@ -1,6 +1,6 @@
 {
   "port": 3060,
-  "serviceUrl": "http://localhost:3000",
+  "serviceUrl": "http://localhost:3060",
   "webServiceUrl": "http://localhost:4200",
   "jwtSecret": "$keys.jwt.secret",
   "jwtExp": "14d",

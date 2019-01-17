@@ -11,39 +11,28 @@
     "typescript",
     "node"
   ],
-  "contributors": [
-    {
-      "name": "Hugo Virgen",
-      "email": "virgenherrera@gmail.com"
-    }
-  ],
-  "homepage": "https://github.com/username/repository#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/username/repository"
-  },
-  "bugs": {
-    "url": "https://github.com/username/repository/issues"
-  },
   "scripts": {
     "start": "node ./dist/index.js",
-    "dev": "./node_modules/.bin/nodemon ./src/index.ts",
+    "dev": "nodemon ./src/index.ts",
     "test": "npm run tslint && nyc mocha",
     "prestart": "npm run build",
     "build": "npm run cleanup && npm run test && npm run tsc",
     "cleanup": "rimraf .nyc_output dist coverage",
-    "tslint": "./node_modules/.bin/tslint -c ./tslint.json -p ./tsconfig.json",
-    "tsc": "./node_modules/.bin/tsc",
-    "tsc:watch": "./node_modules/.bin/tsc -w --sourceMap"
+    "tslint": "tslint -c ./tslint.json -p ./tsconfig.json",
+    "tsc": "tsc",
+    "tsc:watch": "tsc -w --sourceMap"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@tne/express-app": "^1.2.8",
+    "mongoose": "^5.4.4"
+  },
   "devDependencies": {
     "@types/chai": "^4.1.5",
     "@types/mocha": "^5.2.5",
+    "@types/mongoose": "^5.3.7",
     "@types/node": "^10.5.8",
     "@types/rimraf": "^2.0.2",
     "@types/supertest": "^2.0.6",
-    "@types/winston": "^2.4.4",
     "chai": "^4.1.2",
     "mocha": "^5.2.0",
     "nodemon": "^1.18.9",
